@@ -27,5 +27,11 @@ namespace CoralSea.Common
         {
             return _random.Next(minValue, maxValue);
         }
+
+        public static DateTime Time()
+        {
+            var time = TimeSpan.FromMinutes(Next(100000));
+            return DateTime.Now.Subtract(time);
+        }
     }
 }
