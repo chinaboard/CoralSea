@@ -9,6 +9,6 @@ namespace CoralSea.IBusiness.Rank
 {
     public interface IRankLevelBusiness
     {
-        RankLevelModel GetRankLevel(int number);
+        RankLevelModel GetRankLevel(int integral);
     }
 }

@@ -8,6 +8,7 @@ namespace CoralSea.Model.Rank
 {
     public class RankInfoModel
     {
+        public int Id { get; set; }
         public int Type { get; set; }
         public string Name { get; set; }
         public bool OnlyFirst { get; set; }

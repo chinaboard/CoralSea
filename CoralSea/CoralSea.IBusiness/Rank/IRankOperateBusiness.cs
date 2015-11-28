@@ -13,23 +13,23 @@ namespace CoralSea.IBusiness.Rank
         /// 获取所有积分操作
         /// </summary>
         /// <returns></returns>
-        IEnumerable<RankOperateModel> GetUserAllRankOperate();
+        IEnumerable<RankOperateModel> GetUserAllRankOperate(int userId);
         /// <summary>
         /// 获取某天积分操作
         /// </summary>
         /// <param name="time"></param>
         /// <returns></returns>
-        IEnumerable<RankOperateModel> GetUserDayRankOperate(DateTime time);
+        IEnumerable<RankOperateModel> GetUserDayRankOperate(int userId, DateTime time);
         /// <summary>
         /// 获取某时间段积分操作
         /// </summary>
         /// <param name="start"></param>
         /// <param name="end"></param>
         /// <returns></returns>
-        IEnumerable<RankOperateModel> GetUserTimesRankOperate(DateTime start, DateTime end);
+        IEnumerable<RankOperateModel> GetUserTimesRankOperate(int userId, DateTime start, DateTime end);
 
         bool AddRankOperate(RankOperateModel model);
 
-        bool UpdateRankOperate(int id, RankOperateModel model);
+        bool UpdateRankOperate(int userId, RankOperateModel model);
     }
 }
