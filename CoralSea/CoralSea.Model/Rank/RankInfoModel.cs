@@ -12,7 +12,7 @@ namespace CoralSea.Model.Rank
         public string Name { get; set; }
         public bool OnlyFirst { get; set; }
         public int DayLimit { get; set; }
-        public double Step { get; set; }
+        public int Step { get; set; }
         public string Description { get; set; }
     }
 }

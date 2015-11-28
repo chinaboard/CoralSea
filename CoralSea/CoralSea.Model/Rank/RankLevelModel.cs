@@ -8,7 +8,7 @@ namespace CoralSea.Model.Rank
 {
     public class RankLevelModel
     {
-        public double Integral { get; set; }
+        public int Integral { get; set; }
         public int Crown { get; set; }
         public int Sun { get; set; }
         public int Moon { get; set; }
