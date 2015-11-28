@@ -30,5 +30,20 @@ namespace CoralSea.Web.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult NewBaseInfo(string phoneNumer,string microAccount, List<string> interest)
+        {
+            return RedirectToAction("TaskList","TaskManager",null);
+        }
+        
+        public ActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Register(string identify,string jobNumber)
+        {
+            return RedirectToAction("NewBaseInfo", "Home", null);
+        }
     }
 }
