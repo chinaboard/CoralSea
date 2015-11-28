@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{AB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoralSea.UnitTest", "CoralSea.UnitTest\CoralSea.UnitTest.csproj", "{2435C024-8D5A-44CB-B1F9-27C0202A72F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoralSea.Web", "CoralSea.Web\CoralSea.Web.csproj", "{67699A8D-8261-4A6B-A01F-E182D1B7C4DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{2435C024-8D5A-44CB-B1F9-27C0202A72F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2435C024-8D5A-44CB-B1F9-27C0202A72F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2435C024-8D5A-44CB-B1F9-27C0202A72F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67699A8D-8261-4A6B-A01F-E182D1B7C4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67699A8D-8261-4A6B-A01F-E182D1B7C4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67699A8D-8261-4A6B-A01F-E182D1B7C4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67699A8D-8261-4A6B-A01F-E182D1B7C4DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
