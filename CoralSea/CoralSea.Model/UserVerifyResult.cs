@@ -10,5 +10,7 @@ namespace CoralSea.Model
         public bool Result { get; set; }
 
         public string ErrorMessage { get; set; }
+
+        public int UserId { get; set; }
     }
 }
