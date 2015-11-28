@@ -43,6 +43,7 @@
     <Compile Include="FakeTopic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rank\FakeRankInfo.cs" />
+    <Compile Include="Rank\FakeRankOperate.cs" />
     <Compile Include="User\FakeUserInfo.cs" />
   </ItemGroup>
   <ItemGroup>

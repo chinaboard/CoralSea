@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rank\RankInfoBusiness.cs" />
+    <Compile Include="Rank\RankLevelBusiness.cs" />
+    <Compile Include="Rank\RankOperateBusiness.cs" />
     <Compile Include="User\UserInfoBusiness.cs" />
   </ItemGroup>
   <ItemGroup>

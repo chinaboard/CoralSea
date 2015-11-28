@@ -18,7 +18,7 @@ namespace CoralSea.Business.User
 
         public bool UpdateUserInfo(UserInfoModel model)
         {
-            throw new NotImplementedException();
+            return RandomHelper.Bool();
         }
     }
 }
