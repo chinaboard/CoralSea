@@ -18,5 +18,7 @@ namespace CoralSea.IBusiness.Community
         CommunityOperationResult UpdateCommunity(int communityId, CommunityInfoModel model);
 
         CommunityOperationResult AddCommunityMember(CommunityMemberModel model);
+
+        CommunityOperationResult RemoveCommunityMember(CommunityMemberType memberType, int relatedId);
     }
 }
