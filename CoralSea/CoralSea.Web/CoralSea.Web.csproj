@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActivityController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CommunityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -258,7 +259,9 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Community\GuessCommunity.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -274,6 +277,10 @@
     <ProjectReference Include="..\CoralSea.IBusiness\CoralSea.IBusiness.csproj">
       <Project>{d694e937-27d9-4f0c-9c7c-cbc72ae9b8b5}</Project>
       <Name>CoralSea.IBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CoralSea.Injector\CoralSea.Injector.csproj">
+      <Project>{32972c37-9595-4be1-ab32-0a2c0dd70aed}</Project>
+      <Name>CoralSea.Injector</Name>
     </ProjectReference>
     <ProjectReference Include="..\CoralSea.Model\CoralSea.Model.csproj">
       <Project>{7c10b42f-d863-4817-85f4-51bfe1723ad5}</Project>
