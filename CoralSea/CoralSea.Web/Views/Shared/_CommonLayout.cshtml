@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 珊瑚海</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/Content/Font-Awesome/css/font-awesome.min.css" />
+    <link href="~/Content/Common/Layout/Layout.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    @RenderSection("headresource")
+</head>
+<body>
+    <div class="header">
+        <div class="header-container container">
+            <div class="top-nav-area">
+                <ul class="nav-ul">
+                    <li><a class="header-link" href="javascript:void(0)">珊瑚海</a></li> |
+                    <li><a class="header-link" href="javascript:void(0)">同程OA</a></li> |
+                    <li><a class="header-link" href="javascript:void(0)">鱼乐圈</a></li> |
+                    <li><a class="header-link" href="javascript:void(0)">同程大学</a></li> |
+                    <li><a class="header-link" href="javascript:void(0)">知识库</a></li>
+                </ul>
+            </div>
+            <div class="search-area">
+                <input id="search-box" type="text" placeholder="搜索珊瑚海" tabindex="1" />
+            </div>
+            <div class="status-area">
+                <div class="btn-group">
+                    <a id="user-area" href="javascript:void(0)" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                        <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="User Avatar">
+                        <span class="name">勤超</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a class="setting" href="javascript:void(0)">
+                                <i class="fa fa-user icon-user"></i>
+                                <span class="text">&nbsp;个人设置</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="setting" href="javascript:void(0)">
+                                <i class="fa fa-use icon-cogs"></i>
+                                <span class="text">系统设置</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="setting" href="javascript:void(0)">
+                                <i class="fa fa-signout icon-signout"></i>
+                                <span class="text">退出登录</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logo-header">
+        <div class="logo-area">
+            <img id="logo" src="~/Content/Images/logonew.jpg" />
+            @*<span>珊瑚海</span>*@
+        </div>
+        <div class="coral-nav">
+            <ul class="coral-nav-ul">
+                <li><a class="coral-nav-link" href="javascript:void(0)">首页</a></li>
+                <li><a class="coral-nav-link" href="javascript:void(0)">我的圈子</a></li>
+                <li><a class="coral-nav-link" href="javascript:void(0)">活动广场</a></li>
+                <li><a class="coral-nav-link" href="javascript:void(0)">随便看看</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-group">
+                <label class="footer-title">
+                    相关站点
+                </label>
+                <ul class="nav-ul">
+                    <li><a class="footer-link" href="javascript:void(0)">同程OA</a></li> ·
+                    <li><a class="footer-link" href="javascript:void(0)">鱼乐圈</a></li> ·
+                    <li><a class="footer-link" href="javascript:void(0)">同程大学</a></li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <label class="footer-title">
+                    相关功能
+                </label>
+                <ul class="nav-ul">
+                    <li><a class="footer-link" href="javascript:void(0)">我的信息</a></li> ·
+                    <li><a class="footer-link" href="javascript:void(0)">我的圈子</a></li> ·
+                    <li><a class="footer-link" href="javascript:void(0)">随便看看</a></li> ·
+                    <li><a class="footer-link" href="javascript:void(0)">活动广场</a></li> ·
+                    <li><a class="footer-link" href="javascript:void(0)">帮助中心</a></li>
+                </ul>
+            </div>
+            <div class="">
+                © 2015 CoralSea.com, all rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("bottomresource")
+</body>
+</html>

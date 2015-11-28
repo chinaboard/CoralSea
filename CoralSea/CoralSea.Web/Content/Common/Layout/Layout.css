@@ -1,0 +1,136 @@
+﻿body, ul, li {
+    padding: 0px;
+    margin: 0px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+footer, div.header {
+    background: #1B202B;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    color: #d0d1d2;
+}
+
+footer ul.nav-ul li, div.header ul.nav-ul li {
+    display: inline;
+}
+
+footer div.footer-container {
+    padding: 20px 0;
+}
+
+footer div.footer-group {
+    display: inline-block;
+    min-width: 480px;
+}
+
+footer a.footer-link, div.header a.header-link {
+    color: white;
+    font-size: 12px;
+}
+
+footer a.footer-link:hover, div.header a.header-link:hover {
+    color: #FFFFFF;
+}
+
+div.header {
+    background: #3B8600;
+    color: white;
+    padding: 10px;
+}
+
+div.header ul.nav-ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+div.header div.header-container {
+    padding: 0px;
+}
+
+div.header ul.nav-ul li {
+    padding: 0px 15px;
+}
+
+div.header-container > div, .logo-header > div {
+    display: inline-block;
+}
+
+#search-box {
+    padding: 0px 10px;
+}
+
+div.header-container .status-area img {
+    width: 19px;
+}
+
+div.header-container .status-area {
+    float: right;
+}
+
+/*********  弹框显示吧，少年。  *********/
+
+.status-area .dropdown-menu {
+    left: -34px;
+    top: 31px;
+    padding: 0;
+}
+
+.status-area li:first-child {
+    border-top: none;
+}
+
+.status-area .dropdown-menu > li > a {
+    color: #555;
+    font-size: 9px;
+    padding: 8px;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.status-area .dropdown-menu {
+    min-width: 100px;
+}
+
+.btn .caret {
+    border-top-color: #fff;
+}
+
+#user-area {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-size:12px;
+    margin-left: 5px;
+}
+
+/*********  弹框显示吧，少年。  *********/
+
+img#logo {
+    padding: 5px 30px 10px;
+    margin-left: -60px;
+    margin-top: -5px;
+    height: 86px;
+}
+
+.coral-nav-ul li {
+    display: inline-block;
+}
+
+.coral-nav-link {
+    color: black;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    margin: 0px 15px;
+}

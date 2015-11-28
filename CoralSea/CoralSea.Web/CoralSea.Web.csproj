@@ -168,8 +168,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActivityController.cs" />
+    <Compile Include="Controllers\CommunityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TaskManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,12 +185,24 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Common\Layout\Layout.css" />
+    <Content Include="Content\Community\Commnuity.css" />
+    <Content Include="Content\Font-Awesome\css\font-awesome-ie7.css" />
+    <Content Include="Content\Font-Awesome\css\font-awesome-ie7.min.css" />
+    <Content Include="Content\Font-Awesome\css\font-awesome.css" />
+    <Content Include="Content\Font-Awesome\css\font-awesome.min.css" />
+    <Content Include="Content\Font-Awesome\font\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\logonew.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Font-Awesome\font\fontawesome-webfont.eot" />
+    <Content Include="Content\Font-Awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\Font-Awesome\font\fontawesome-webfont.woff" />
+    <Content Include="Content\Font-Awesome\font\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -234,6 +249,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\TaskManager\TaskList.cshtml" />
+    <Content Include="Views\Home\NewBaseInfo.cshtml" />
+    <Content Include="Views\Activity\Index.cshtml" />
+    <Content Include="Views\Shared\_CommonLayout.cshtml" />
+    <Content Include="Views\Community\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

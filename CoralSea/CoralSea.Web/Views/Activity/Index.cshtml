@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .activity {
+        background-color: white;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .activity-title {
+        border-bottom: 1px solid;
+        border-color: #e7eaec;
+    }
+</style>
+<div class="row" style="background-color: rgb(217, 237, 247);height: 400px">
+    <div class="activity col-lg-3">
+        <div class="activity-title">
+            <h4 style="display: inline-block">黑客大赛之密室风云</h4>
+            <div style="display: inline-block; margin-top: 10px" class="pull-right">
+                <i class="glyphicon glyphicon-chevron-down"></i>
+                <i class="glyphicon glyphicon-plus"></i>
+                <i class="glyphicon glyphicon-trash"></i>
+            </div>
+        </div>
+        <div class="activity-content">
+            <div>
+                <div class="pull-left text-left">
+                    活动发起人：研发管理部
+                    <br />
+                    活动地点：小石湖现代园墅
+                    <br />
+                    活动发起时间：2015-11-23
+                    <br />
+                    报名起止时间：2015-11-23~2015-11-26
+                    <br />
+                    活动起止时间：2015-11-28~2015-11-29
+                    <br />
+                    活动简介:XXXXXXXX....
+                    <br />
+                    <a class="pull-right" href="#">详细</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="activity col-lg-3">
+        <div class="activity-title">
+            <h4 style="display: inline-block">黑客大赛之密室风云</h4>
+            <div style="display: inline-block; margin-top: 10px" class="pull-right">
+                <i class="glyphicon glyphicon-chevron-down"></i>
+                <i class="glyphicon glyphicon-plus"></i>
+                <i class="glyphicon glyphicon-trash"></i>
+            </div>
+        </div>
+        <div class="activity-content">
+            <div>
+                <div class="pull-left text-left">
+                    活动发起人：研发管理部
+                    <br />
+                    活动地点：小石湖现代园墅
+                    <br />
+                    活动发起时间：2015-11-23
+                    <br />
+                    报名起止时间：2015-11-23~2015-11-26
+                    <br />
+                    活动起止时间：2015-11-28~2015-11-29
+                    <br />
+                    活动简介:XXXXXXXX....
+                    <br />
+                    <a class="pull-right" href="#">详细</a>
+                </div>
+            </div>
+        </div>
+    </div><div class="activity col-lg-3">
+    <div class="activity-title">
+        <h4 style="display: inline-block">黑客大赛之密室风云</h4>
+        <div style="display: inline-block; margin-top: 10px" class="pull-right">
+            <i class="glyphicon glyphicon-chevron-down"></i>
+            <i class="glyphicon glyphicon-plus"></i>
+            <i class="glyphicon glyphicon-trash"></i>
+        </div>
+    </div>
+    <div class="activity-content">
+        <div>
+            <div class="pull-left text-left">
+                活动发起人：研发管理部
+                <br />
+                活动地点：小石湖现代园墅
+                <br />
+                活动发起时间：2015-11-23
+                <br />
+                报名起止时间：2015-11-23~2015-11-26
+                <br />
+                活动起止时间：2015-11-28~2015-11-29
+                <br />
+                活动简介:XXXXXXXX....
+                <br />
+                <a class="pull-right" href="#">详细</a>
+            </div>
+        </div>
+    </div>
+</div><div class="activity col-lg-3">
+    <div class="activity-title">
+        <h4 style="display: inline-block">黑客大赛之密室风云</h4>
+        <div style="display: inline-block; margin-top: 10px" class="pull-right">
+            <i class="glyphicon glyphicon-chevron-down"></i>
+            <i class="glyphicon glyphicon-plus"></i>
+            <i class="glyphicon glyphicon-trash"></i>
+        </div>
+    </div>
+    <div class="activity-content">
+        <div>
+            <div class="pull-left text-left">
+                活动发起人：研发管理部
+                <br />
+                活动地点：小石湖现代园墅
+                <br />
+                活动发起时间：2015-11-23
+                <br />
+                报名起止时间：2015-11-23~2015-11-26
+                <br />
+                活动起止时间：2015-11-28~2015-11-29
+                <br />
+                活动简介:XXXXXXXX....
+                <br />
+                <a class="pull-right" href="#">详细</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="row" style="background-color: rgb(217, 237, 247)">
+    <nav class="pull-right" style="margin-right: 20px">
+        <ul class="pagination">
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+
+        </ul>
+    </nav>
+</div>
+<script>
+
+    $(".glyphicon").click(function () {
+        if ($(this).hasClass("glyphicon-chevron-up")) {
+            $(this).closest(".activity").find(".activity-content").slideDown();
+            $(this).removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+            return;
+        }
+        if ($(this).hasClass("glyphicon-chevron-down")) {
+            $(this).closest(".activity").find(".activity-content").slideUp();
+            $(this).removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+            return;
+        }
+    });
+    $(".glyphicon").click(function () {
+        if ($(this).hasClass("glyphicon-plus")) {
+            $(this).removeClass("glyphicon-plus").addClass("glyphicon-minus");
+            alert("成功加入活动！");
+            return;
+        }
+        if ($(this).hasClass("glyphicon-minus")) {
+            $(this).removeClass("glyphicon-minus").addClass("glyphicon-plus");
+            return;
+        }
+    });
+    $(".glyphicon").click(function () {
+        if ($(this).hasClass("glyphicon-trash")) {
+            if (confirm("将不再显示该活动！")) {
+                $(this).closest(".activity").remove();
+            }
+            return;
+        }
+
+    });
+</script>
