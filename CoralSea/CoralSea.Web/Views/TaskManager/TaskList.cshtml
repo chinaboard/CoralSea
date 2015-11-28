@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "TaskList";
+}
+
+<style>
+    .task {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: rgb(217, 237, 247);
+    }
+    .task-info {
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+</style>
+<div style="height: 500px">
+    <ul class="nav nav-pills" style="display: inline-block">
+        <li role="presentation" class="disabled"><a href="#" id="count">2 项任务</a></li>
+        <li role="presentation" id="all"><a href="#">全部</a></li>
+        <li role="presentation" id="needcomplete"><a href="#">待完成</a></li>
+        <li role="presentation" id="completed"><a href="#">已完成</a></li>
+    </ul>
+    <div style="clear: both">
+        <div id="1">
+            <div class="task">
+                <span class="glyphicon glyphicon-tag"></span>1:熟悉同程基本法。
+                <span class="pull-right"><i class="glyphicon glyphicon-ok"></i>已完成</span>
+            </div>
+            <div class="task-info" style="display: none">
+                <div>
+                    详细内容：去同程娱乐圈地址：<a href="#">www.xxxx.com</a>阅读同程基本法，并完成测验。
+                </div>
+                <div>完成条件：基本法测验成绩达到60分。</div>
+            </div>
+        </div>
+        <div id="2">
+            <div class="task">
+                <span class="glyphicon glyphicon-tag"></span>2:熟记办公常识。
+                <span class="pull-right"><i class="glyphicon glyphicon-question-sign"></i>待完成</span>
+            </div>
+            <div class="task-info" style="display: none">
+                <div>
+                    详细内容：熟悉办公请假，申请加班，写周报，日志等操作。并在OA中写一篇日志，OA地址：<a href="#">www.xxxx.com</a>
+                </div>
+                <div>完成条件：在娱乐圈写第一篇日志。</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".task").click(function () {
+      var $info=  $(this).siblings();
+      if ($info.css("display") === "none") {
+            $(this).siblings().slideDown();
+        } else {
+            $(this).siblings().slideUp();
+        }
+        
+    });
+    $("#all").click(function() {
+        $("#1").show();
+        $("#2").show();
+        $("#count").html("2 项任务");
+    });
+    $("#needcomplete").click(function () {
+        $("#1").hide();
+        $("#2").show();
+        $("#count").html("1 项任务");
+    });
+    $("#completed").click(function () {
+        $("#1").show();
+        $("#2").hide();
+        $("#count").html("1 项任务");
+    });
+</script>

@@ -42,14 +42,14 @@ namespace CoralSea.Web.Models
     public class ForgotViewModel
     {
         [Required]
-        [Display(Name = "电子邮件")]
-        public string Email { get; set; }
+        [Display(Name = "身份证号码")]
+        public string Iden { get; set; }
     }
 
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "电子邮件")]
+        [Display(Name = "身份证号码")]
         [EmailAddress]
         public string Email { get; set; }
 
