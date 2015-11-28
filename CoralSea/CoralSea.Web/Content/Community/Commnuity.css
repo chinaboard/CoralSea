@@ -1,0 +1,104 @@
+﻿.table {
+    margin: 0px;
+}
+
+.community-nav-button {
+    display: inline-block;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    background-color: #F9F9F9;
+    border-radius: 5px;
+    padding: 4px 15px;
+    cursor: pointer;
+    margin: 0px 3px;
+    border: 1px solid #EAEAEA;
+}
+
+.community-nav .active {
+    background: #285171;
+    color: white;
+    border: 1px solid #A2A2A2;
+}
+
+.a-community {
+    font-size: 12px;
+}
+
+.a-community img.avatar {
+    width: 40px;
+}
+
+.a-community .community-content {
+    margin-left: 48px;
+}
+
+.a-community .group-name {
+    float: right;
+}
+
+.a-community p {
+    margin: 0px;
+}
+
+.a-community .community-inner-content {
+    border-left: 5px solid Gray;
+    padding: 4px 10px;
+    margin: 5px 0px;
+}
+
+.a-community hr {
+    margin: 12px 0px;
+}
+
+.pagination {
+    margin: 10px 0px;
+    float: right;
+}
+
+/**********  右侧侧边栏  **********/
+
+.right-widget img.userface {
+    max-width: 120px;
+    max-height: 200px;
+}
+
+.right-widget {
+    font-size: 12px;
+    border: 1px solid #EAEAEA;
+    margin-bottom: 15px;
+}
+
+.right-widget .dl-horizontal dt {
+    width: 70px;
+}
+
+.right-widget .dl-horizontal dt:after {
+    content: "：";
+}
+
+.right-widget .dl-horizontal dd {
+    margin: 5px;
+    margin-left: 75px;
+    width: 200px;
+}
+
+.right-widget .widget-head {
+    background-color: #F5F5F5;
+    padding: 6px 12px;
+    font-family: 'Microsoft Yahei';
+}
+
+.right-widget .user-info {
+    display: inline-block;
+    width: 100%;
+}
+
+.right-widget .widget-content {
+    padding: 5px;
+}
+
+.widget-head > div {
+    display: inline-block;
+}
+
+/**********  右侧侧边栏  **********/
