@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/Content/Font-Awesome/css/font-awesome.min.css" />
     <link href="~/Content/Common/Layout/Layout.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
-    @RenderSection("headresource")
+    @RenderSection("headresource", false)
 </head>
 <body>
     <div class="header">
@@ -65,12 +65,13 @@
             <ul class="coral-nav-ul">
                 <li><a class="coral-nav-link" href="javascript:void(0)">首页</a></li>
                 <li><a class="coral-nav-link" href="javascript:void(0)">我的圈子</a></li>
+                <li><a class="coral-nav-link" href="javascript:void(0)">发现圈子</a></li>
                 <li><a class="coral-nav-link" href="javascript:void(0)">活动广场</a></li>
                 <li><a class="coral-nav-link" href="javascript:void(0)">随便看看</a></li>
             </ul>
         </div>
     </div>
-    <div class="container">
+    <div class="container" style="padding: 15px 0px;">
         @RenderBody()
     </div>
     <footer>
@@ -105,6 +106,6 @@
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    @RenderSection("bottomresource")
+    @RenderSection("bottomresource", false)
 </body>
 </html>
