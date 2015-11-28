@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+body{
+    background-color: #F5F5F5;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -37,7 +41,6 @@ footer a.footer-link:hover, div.header a.header-link:hover {
 }
 
 div.header {
-    background: #3B8600;
     color: white;
     padding: 10px;
 }
@@ -53,6 +56,10 @@ div.header div.header-container {
 
 div.header ul.nav-ul li {
     padding: 0px 15px;
+}
+
+.logo-header {
+    background-color: white;
 }
 
 div.header-container > div, .logo-header > div {
@@ -113,12 +120,17 @@ div.header-container .status-area {
     color: white;
     font-size:12px;
     margin-left: 5px;
+    text-decoration: none;
+}
+
+#user-area:hover {
+    text-decoration: none;
 }
 
 /*********  弹框显示吧，少年。  *********/
 
 img#logo {
-    padding: 5px 30px 10px;
+    padding: 5px 30px 0px;
     margin-left: -60px;
     margin-top: -5px;
     height: 86px;
