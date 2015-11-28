@@ -203,6 +203,7 @@
     <Content Include="Content\Font-Awesome\font\fontawesome-webfont.ttf" />
     <Content Include="Content\Font-Awesome\font\fontawesome-webfont.woff" />
     <Content Include="Content\Font-Awesome\font\FontAwesome.otf" />
+    <Content Include="App_Data\TCConfig\CoralSea.Injector.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -255,9 +256,7 @@
     <Content Include="Views\Shared\_CommonLayout.cshtml" />
     <Content Include="Views\Community\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
