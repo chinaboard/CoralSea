@@ -22,6 +22,11 @@ namespace CoralSea.Business.Community
             return new TopicOperationResult() { IsSucceed = RandomHelper.Bool(), ErrorMessage = "gaga" };
         }
 
+        public List<TopicModel> GetLastHostTopics(int userId, int topK)
+        {
+            throw new NotImplementedException();
+        }
+
         public TopicModel GetTopic(int topicId)
         {
             return new FakeTopic(topicId);

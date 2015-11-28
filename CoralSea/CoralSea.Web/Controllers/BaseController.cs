@@ -11,10 +11,7 @@ namespace CoralSea.Web.Controllers
     {
         internal protected UserInfoModel CurrentUserInfo
         {
-            get
-            {
-
-            }
+            get;
         }
     }
 }
