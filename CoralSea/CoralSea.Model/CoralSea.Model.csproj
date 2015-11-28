@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Community\CommunityType.cs" />
     <Compile Include="Novice\PersonalInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TourMission\TourMissionCompleteResult.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="TourMission\TourMissionSummaryModel.cs" />
     <Compile Include="UserLoginModel.cs" />
     <Compile Include="UserVerifyResult.cs" />
+    <Compile Include="User\UserInfoModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
