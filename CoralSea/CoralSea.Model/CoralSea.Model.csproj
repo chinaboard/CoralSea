@@ -40,6 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Community\CommunityInfoModel.cs" />
+    <Compile Include="Community\CommunityMemberModel.cs" />
+    <Compile Include="Community\CommunityOperationResult.cs" />
+    <Compile Include="Community\CommunityType.cs" />
+    <Compile Include="Community\TopicOperationResult.cs" />
+    <Compile Include="Community\TopicModel.cs" />
+    <Compile Include="Community\TopicReplyModel.cs" />
     <Compile Include="Novice\PersonalInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rank\RankInfoModel.cs" />
@@ -50,6 +57,7 @@
     <Compile Include="TourMission\TourMissionSummaryModel.cs" />
     <Compile Include="UserLoginModel.cs" />
     <Compile Include="UserVerifyResult.cs" />
+    <Compile Include="User\UserInfoModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,5 +12,7 @@ namespace CoralSea.IBusiness.TourMission
         TourMissionModel GetTourMission(int missionId);
 
         TourMissionCompleteResult CompleteMission<T>(int missionId, T completeModel);
+
+        bool IsFinishedAllMustMission(int userId);
     }
 }

@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Community\ICommunityBusiness.cs" />
+    <Compile Include="Community\ITopicBusiness.cs" />
     <Compile Include="Novice\IPersonalInfoBusiness.cs" />
     <Compile Include="ISecurityBusinesscs.cs" />
     <Compile Include="Novice\ISliderBusiness.cs" />
@@ -49,6 +51,7 @@
     <Compile Include="Rank\IRankOperateBusiness.cs" />
     <Compile Include="TourMission\ITourMissionBusiness.cs" />
     <Compile Include="TourMission\ITourMissionListBusiness.cs" />
+    <Compile Include="User\IUserInfoBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CoralSea.Model\CoralSea.Model.csproj">

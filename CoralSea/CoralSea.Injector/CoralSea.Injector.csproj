@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{857BA93F-4F47-41FA-AEE9-200EF4023274}</ProjectGuid>
+    <ProjectGuid>{32972C37-9595-4BE1-AB32-0A2C0DD70AED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CoralSea.Common</RootNamespace>
-    <AssemblyName>CoralSea.Common</AssemblyName>
+    <RootNamespace>CoralSea.Injector</RootNamespace>
+    <AssemblyName>CoralSea.Injector</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DefaultResolvePolicy.cs" />
+    <Compile Include="DependenceInjector.cs" />
+    <Compile Include="Finder.cs" />
+    <Compile Include="InjectorConfig.cs" />
+    <Compile Include="IResolvePolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomHelper.cs" />
+    <Compile Include="ResolvePolicyFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

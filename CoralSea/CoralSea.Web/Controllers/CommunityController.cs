@@ -6,10 +6,23 @@ using System.Web.Mvc;
 
 namespace CoralSea.Web.Controllers
 {
+    /// <summary>
+    /// 登录后的主页，以及圈子页面
+    /// </summary>
     public class CommunityController : Controller
     {
-        // GET: Community
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult GuessCommunity()
         {
             return View();
         }
