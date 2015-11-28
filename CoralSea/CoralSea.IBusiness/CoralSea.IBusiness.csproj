@@ -49,6 +49,7 @@
     <Compile Include="Rank\IRankInfoBusiness.cs" />
     <Compile Include="Rank\IRankLevelBusiness.cs" />
     <Compile Include="Rank\IRankOperateBusiness.cs" />
+    <Compile Include="Tag\ITagBusiness.cs" />
     <Compile Include="TourMission\ITourMissionBusiness.cs" />
     <Compile Include="TourMission\ITourMissionListBusiness.cs" />
     <Compile Include="User\IUserInfoBusiness.cs" />

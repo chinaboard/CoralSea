@@ -13,5 +13,10 @@ namespace CoralSea.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult CheckTask()
+        {
+            return RedirectToAction("Index", "Community", null);
+        }
     }
 }
