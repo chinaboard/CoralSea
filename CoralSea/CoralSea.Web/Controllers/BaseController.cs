@@ -7,8 +7,14 @@ using System.Web.Mvc;
 
 namespace CoralSea.Web.Controllers
 {
-    public class BaseController : Controller
+    public abstract class BaseController : Controller
     {
-        public UserInfoModel CurrentUserInfo { get; set; }
+        internal protected UserInfoModel CurrentUserInfo
+        {
+            get
+            {
+
+            }
+        }
     }
 }

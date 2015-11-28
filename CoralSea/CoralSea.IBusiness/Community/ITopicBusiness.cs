@@ -18,5 +18,7 @@ namespace CoralSea.IBusiness.Community
         TopicOperationResult ChangeTopicStatus(int topicId, TopicStatus status);
 
         TopicOperationResult ReplyTopic(int topicId, TopicReplyModel model);
+
+        List<TopicModel> GetLastHostTopics(int userId, int topK);
     }
 }
