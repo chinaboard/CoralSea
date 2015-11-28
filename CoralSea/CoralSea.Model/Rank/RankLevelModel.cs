@@ -13,5 +13,6 @@ namespace CoralSea.Model.Rank
         public int Sun { get; set; }
         public int Moon { get; set; }
         public int Star { get; set; }
+        public int Level { get; set; }
     }
 }

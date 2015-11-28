@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Community\FakeCommunityInfo.cs" />
+    <Compile Include="Community\FakeCommunityMember.cs" />
     <Compile Include="Community\FakeTopic.cs" />
     <Compile Include="Community\FakeTopicReply.cs" />
+    <Compile Include="FakeImage.cs" />
     <Compile Include="FakeName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rank\FakeRankInfo.cs" />
