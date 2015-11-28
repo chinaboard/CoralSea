@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CoralSea.Model.User;
 using CoralSea.FakeData.User;
+using CoralSea.Common;
 
 namespace CoralSea.Business.User
 {
