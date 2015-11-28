@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CoralSea.UnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class SecurityBusinessTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void should_verify_user_succeed()
         {
 
         }

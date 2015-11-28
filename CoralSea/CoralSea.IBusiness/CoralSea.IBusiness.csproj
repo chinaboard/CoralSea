@@ -43,6 +43,12 @@
     <Compile Include="ISecurityBusinesscs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoralSea.Model\CoralSea.Model.csproj">
+      <Project>{7c10b42f-d863-4817-85f4-51bfe1723ad5}</Project>
+      <Name>CoralSea.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
