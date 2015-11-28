@@ -42,15 +42,16 @@
   <ItemGroup>
     <Compile Include="Novice\PersonalInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rank\RankInfoModel.cs" />
+    <Compile Include="Rank\RankLevelModel.cs" />
+    <Compile Include="Rank\RankOperateModel.cs" />
     <Compile Include="TourMission\TourMissionCompleteResult.cs" />
     <Compile Include="TourMission\TourMissionModel.cs" />
     <Compile Include="TourMission\TourMissionSummaryModel.cs" />
     <Compile Include="UserLoginModel.cs" />
     <Compile Include="UserVerifyResult.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Rank\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
