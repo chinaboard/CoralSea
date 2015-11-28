@@ -9,6 +9,7 @@ namespace CoralSea.UnitTest
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
