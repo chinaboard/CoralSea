@@ -16,6 +16,11 @@ namespace CoralSea.Model.Community
 
         public string Image { get; set; }
 
+        /// <summary>
+        /// 圈子管理员ID
+        /// </summary>
+        public int MasterId { get; set; }
+
         public string Description { get; set; }
 
         public DateTime CreateTime { get; set; }
