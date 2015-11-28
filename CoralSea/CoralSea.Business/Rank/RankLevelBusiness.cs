@@ -28,7 +28,7 @@ namespace CoralSea.Business.Rank
         public int GetLevel(int integral)
         {
             for (int i = 2; i < 200; i++)
-                if (i * i + 4 * i >= integral)
+                if (i * i + 4 * i > integral)
                     return i - 1;
             return 1;
         }
