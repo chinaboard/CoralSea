@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace CoralSea.Model
+namespace CoralSea.Model.Community
 {
-    public class UserVerifyResult
+    public class TopicOperationResult
     {
-        public bool Result { get; set; }
+        public bool IsSucceed { get; set; }
 
         public string ErrorMessage { get; set; }
-
-        public int UserId { get; set; }
     }
 }

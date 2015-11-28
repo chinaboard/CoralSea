@@ -42,6 +42,19 @@
   <ItemGroup>
     <Compile Include="FakeTopic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rank\FakeRankInfo.cs" />
+    <Compile Include="Rank\FakeRankOperate.cs" />
+    <Compile Include="User\FakeUserInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoralSea.Common\CoralSea.Common.csproj">
+      <Project>{857ba93f-4f47-41fa-aee9-200ef4023274}</Project>
+      <Name>CoralSea.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CoralSea.Model\CoralSea.Model.csproj">
+      <Project>{7c10b42f-d863-4817-85f4-51bfe1723ad5}</Project>
+      <Name>CoralSea.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
