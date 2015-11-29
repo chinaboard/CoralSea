@@ -13,7 +13,7 @@ namespace CoralSea.FakeData.Tag
         public FakeTag()
         {
             TagId = RandomHelper.Next(35345);
-            TagName = FakeName.MakeFakeName();
+            TagName = FakeName.MakeFakeTag();
             HotDegree = RandomHelper.Next(5000);
         }
     }

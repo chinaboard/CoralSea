@@ -24,7 +24,8 @@ namespace CoralSea.FakeData.User
             LastLoginTime = DateTime.Now;
             NickName = FakeName.MakeFakeName();
             GroupName = FakeName.MakeFakeGroupName();
-            Interesting.AddRange(new List<string>() { "耍帅", "睡觉", "撸代码" });
+            for (int i = 0; i < RandomHelper.Next(2, 6); i++)
+                Interesting.Add(FakeName.MakeFakeTag());
             Signature = "yooooooooooo";
             Image = FakeImage.MakeFakeImage();
         }
