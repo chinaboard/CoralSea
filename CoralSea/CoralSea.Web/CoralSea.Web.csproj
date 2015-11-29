@@ -275,6 +275,10 @@
       <Project>{d694e937-27d9-4f0c-9c7c-cbc72ae9b8b5}</Project>
       <Name>CoralSea.IBusiness</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CoralSea.Injector\CoralSea.Injector.csproj">
+      <Project>{32972c37-9595-4be1-ab32-0a2c0dd70aed}</Project>
+      <Name>CoralSea.Injector</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CoralSea.Model\CoralSea.Model.csproj">
       <Project>{7c10b42f-d863-4817-85f4-51bfe1723ad5}</Project>
       <Name>CoralSea.Model</Name>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using CoralSea.IBusiness;
+using CoralSea.Injector;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -16,7 +17,7 @@ namespace CoralSea.Web.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private static readonly ISecurityBusinesscs IsecurityBusinesscs = null;
+        private static readonly ISecurityBusinesscs IsecurityBusinesscs = DependenceInjector.GetInstance<ISecurityBusinesscs>();
         public AccountController()
         {
         }
