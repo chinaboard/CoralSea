@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="~/Content/Font-Awesome/css/font-awesome.min.css" />
     <link href="~/Content/Common/Layout/Layout.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("headresource", false)
 </head>
 <body>
@@ -32,13 +34,7 @@
             </div>
             @if (userInfo == null)
             {
-                <div class="status-area">
-                    <div class="btn-group">
-                        <a id="user-area" href="javascript:void(0)" class="btn btn-link">
-                            请登录
-                        </a>
-                    </div>
-                </div>
+                @Html.ActionLink("登陆", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", style = "color: white",@class="pull-right" })
             }
             else
             {
@@ -121,8 +117,8 @@
         </div>
     </footer>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+
     @RenderSection("bottomresource", false)
+    @RenderSection("scripts",false)
 </body>
 </html>
