@@ -19,6 +19,7 @@ namespace CoralSea.FakeData.Community
                 ReplyList.Add(new FakeTopicReply(topicId, RandomHelper.Next(10000)));
             CreateTime = RandomHelper.Time();
             LastUpdateTime = RandomHelper.Time();
+            Owner = new FakeCommunityInfo();
         }
     }
 }
