@@ -26,7 +26,7 @@
         <div id="1">
             <div class="task">
                 <span class="glyphicon glyphicon-tag"></span>(必做)1:熟悉同程基本法。
-                <span class="pull-right">+10积分<i class="glyphicon glyphicon-ok"></i>已完成</span>
+                <span class="pull-right">+10积分<i class="glyphicon glyphicon-question-sign"></i>待完成</span>
             </div>
             <div class="task-info" style="display: none">
                 <div>
@@ -72,13 +72,13 @@
         $("#count").html("2 项任务");
     });
     $("#needcomplete").click(function () {
-        $("#1").hide();
+        $("#1").show();
         $("#2").show();
-        $("#count").html("1 项任务");
+        $("#count").html("2 项任务");
     });
     $("#completed").click(function () {
-        $("#1").show();
+        $("#1").hide();
         $("#2").hide();
-        $("#count").html("1 项任务");
+        $("#count").html("0项任务");
     });
 </script>

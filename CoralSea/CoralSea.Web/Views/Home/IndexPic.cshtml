@@ -6,16 +6,18 @@
 @Styles.Render("~/Scripts/fullpage.js/css/jquery.fullPage.css")
 <div id="dowebok">
     <div class="section">
-        <div class="slide" style="text-align: center;background-color: #4BBFC3"></div>
-        <div class="slide" style="text-align: center;background-color: #7BAABE"></div>
-        <div class="slide" style="text-align: center;background-color: #f90"></div>
-        <div class="slide" style="text-align: center;background-color: #1bbc9b"><a href="@Url.Content("~/Home/NewBaseInfo")">点击图片进入维护基本信息...</a></div>
+        <div class="slide" style="text-align: center;background-color: #4BBFC3"><p style="text-align: center; font-size: 30pt;color:#fff;">同程历程介绍  第一页</p></div>
+        <div class="slide" style="text-align: center;background-color: #7BAABE"><p style="text-align: center; font-size: 30pt;color:#fff;">同程历程介绍  第二页</p></div>
+        <div class="slide" style="text-align: center;background-color: #f90"><p style="text-align: center; font-size: 30pt;color:#fff;">同程历程介绍  第三页</p></div>
+        <div class="slide" style="text-align: center;background-color: #1bbc9b"><a href="@Url.Content("~/Home/NewBaseInfo")" style="text-align: center; font-size: 30pt;color:#fff;">点击图片进入维护基本信息...</a></div>
     </div>
 </div>
 <script type="text/javascript">
     $(function () {
         $('#dowebok').fullpage({
-            slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
+            slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+            scrollingSpeed: 6000,
+            autoScrolling: false
         });
     });
 </script>
