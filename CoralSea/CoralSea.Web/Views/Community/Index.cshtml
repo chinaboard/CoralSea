@@ -92,7 +92,7 @@
                     <div class="user-info">
                         <div class="bd">
                             <div class="basic-info">
-                                <img src="http://shuxue.chazidian.com/uploadfile/2014/0630/20140630080100878.jpg" class="userface" alt="">
+                                <img src="@userInfo.Image" class="userface" alt="">
                                 <div class="user-info">
                                     <div class="pl">@userInfo.Name</div>
                                 </div>
@@ -104,7 +104,7 @@
                                     <dt>组织架构</dt>
                                     <dd>@userInfo.GroupName</dd>
                                     <dt>积分等级</dt>
-                                    <dd>@(string.Format("{3}皇冠{0}日{1}月{2}星", rankLevel.Sun, rankLevel.Moon, rankLevel.Star, rankLevel.Crown)</dd>
+                                    <dd>LEVEL @rankLevel.Level</dd>
                                     <dt>兴&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;趣</dt>
                                     <dd>
                                         <div>
