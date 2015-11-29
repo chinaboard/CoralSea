@@ -14,6 +14,7 @@ namespace CoralSea.Model.Community
         public int CreatorId { get; set; }
 
         public string TopicTitle { get; set; }
+        public string Content { get; set; }
 
         public int ViewCount { get; set; }
 

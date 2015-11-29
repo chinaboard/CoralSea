@@ -44,6 +44,7 @@
     <Compile Include="Community\FakeCommunityMember.cs" />
     <Compile Include="Community\FakeTopic.cs" />
     <Compile Include="Community\FakeTopicReply.cs" />
+    <Compile Include="FakeContent.cs" />
     <Compile Include="FakeImage.cs" />
     <Compile Include="FakeName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
