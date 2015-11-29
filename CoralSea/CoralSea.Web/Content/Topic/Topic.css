@@ -11,7 +11,7 @@ hr {
 
 #intestring {
     margin-left: 15px;
-    width: 370px;
+    width: 300px;
 }
 
 .topic-ul li {
@@ -39,7 +39,7 @@ hr {
 
 .topic-content {
     margin-left: 60px;
-    min-width: 700px;
+    width: 90%;
 }
 
 ul.topic-ul {
