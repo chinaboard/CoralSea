@@ -1,310 +1,50 @@
-﻿@{
+﻿@using CoralSea.Model.Community;
+@using CoralSea.Model.Tag;
+@{
     ViewBag.Title = "发现圈子";
     Layout = "~/Views/Shared/_CommonLayout.cshtml";
+
+    var hotTags = ViewData["HotTags"] as List<TagModel> ?? new List<TagModel>();
+    var recos = ViewData["RecoComm"] as List<CommunityInfoModel> ?? new List<CommunityInfoModel>();
 }
+@model List<CommunityInfoModel>
 
 <div class="row">
     <div id="community-master-area" class="col-md-8 panel">
-        <div class="community-area">
-             <div>
-                 <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-             </div>
-             <div class="community-content">
-                 <div class="community-path">
-                     <a href="javascript:void(0)">编程爱好者</a> >> 
-                     <a href="javascript:void(0)">.Net Core内核研究</a>
-                     <label class="label label-success community-status">已加入</label>
-                 </div>
-                 <hr />
-                 <div class="community-description">
-                     测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                 </div>
-                 <hr />
-                 <div>
-                     <ul class="community-option-group">
-                         <li>
-                             <span>
-                                 <span class="label label-info">程序</span>
-                                 <span class="label label-info">编程与人生</span>
-                                 <span class="label label-info">Geeker</span>
-                             </span>
-                             <span>创建于2015年11月29日</span>
-                             <span>组内成员 177 人</span>
-                         </li>
-                     </ul>
-                 </div>
-             </div>
-         </div>
-        <div class="community-area">
-            <div>
-                <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-            </div>
-            <div class="community-content">
-                <div class="community-path">
-                    <a href="javascript:void(0)">编程爱好者</a> >>
-                    <a href="javascript:void(0)">.Net Core内核研究</a>
-                    <label class="label label-success community-status">已加入</label>
-                </div>
-                <hr />
-                <div class="community-description">
-                    测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                </div>
-                <hr />
+        @foreach (var aCommunity in Model)
+        {
+            <div class="community-area">
                 <div>
-                    <ul class="community-option-group">
-                        <li>
-                            <span>
-                                <span class="label label-info">程序</span>
-                                <span class="label label-info">编程与人生</span>
-                                <span class="label label-info">Geeker</span>
-                            </span>
-                            <span>创建于2015年11月29日</span>
-                            <span>组内成员 177 人</span>
-                        </li>
-                    </ul>
+                    <img class="community-image" src="@aCommunity.Image" alt="Community Image" />
+                </div>
+                <div class="community-content">
+                    <div class="community-path">
+                        <a href="javascript:void(0)">@aCommunity.ParentId</a> >>
+                        <a href="javascript:void(0)">@aCommunity.Name</a>
+                        <label class="label label-@(aCommunity.HasCurrentUserJoin ? "success" : "default") community-status">@(aCommunity.HasCurrentUserJoin ? "已加入" : "未加入")</label>
+                    </div>
+                    <hr />
+                    <div class="community-description">
+                        @aCommunity.Description
+                    </div>
+                    <hr />
+                    <div>
+                        <ul class="community-option-group">
+                            <li>
+                                <span>
+                                    @foreach (var aTag in aCommunity.Tags)
+                                    {
+                                        <span class="label label-info">程序</span>
+                                    }
+                                </span>
+                                <span>创建于 @aCommunity.CreateTime.ToString("yyyy年MM月dd日")</span>
+                                <span>组内成员 @aCommunity.MemberCount 人</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="community-area">
-            <div>
-                <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-            </div>
-            <div class="community-content">
-                <div class="community-path">
-                    <a href="javascript:void(0)">编程爱好者</a> >>
-                    <a href="javascript:void(0)">.Net Core内核研究</a>
-                    <label class="label label-success community-status">已加入</label>
-                </div>
-                <hr />
-                <div class="community-description">
-                    测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                </div>
-                <hr />
-                <div>
-                    <ul class="community-option-group">
-                        <li>
-                            <span>
-                                <span class="label label-info">程序</span>
-                                <span class="label label-info">编程与人生</span>
-                                <span class="label label-info">Geeker</span>
-                            </span>
-                            <span>创建于2015年11月29日</span>
-                            <span>组内成员 177 人</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="community-area">
-            <div>
-                <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-            </div>
-            <div class="community-content">
-                <div class="community-path">
-                    <a href="javascript:void(0)">编程爱好者</a> >>
-                    <a href="javascript:void(0)">.Net Core内核研究</a>
-                    <label class="label label-success community-status">已加入</label>
-                </div>
-                <hr />
-                <div class="community-description">
-                    测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                </div>
-                <hr />
-                <div>
-                    <ul class="community-option-group">
-                        <li>
-                            <span>
-                                <span class="label label-info">程序</span>
-                                <span class="label label-info">编程与人生</span>
-                                <span class="label label-info">Geeker</span>
-                            </span>
-                            <span>创建于2015年11月29日</span>
-                            <span>组内成员 177 人</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="community-area">
-            <div>
-                <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-            </div>
-            <div class="community-content">
-                <div class="community-path">
-                    <a href="javascript:void(0)">编程爱好者</a> >>
-                    <a href="javascript:void(0)">.Net Core内核研究</a>
-                    <label class="label label-success community-status">已加入</label>
-                </div>
-                <hr />
-                <div class="community-description">
-                    测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                </div>
-                <hr />
-                <div>
-                    <ul class="community-option-group">
-                        <li>
-                            <span>
-                                <span class="label label-info">程序</span>
-                                <span class="label label-info">编程与人生</span>
-                                <span class="label label-info">Geeker</span>
-                            </span>
-                            <span>创建于2015年11月29日</span>
-                            <span>组内成员 177 人</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="community-area">
-            <div>
-                <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-            </div>
-            <div class="community-content">
-                <div class="community-path">
-                    <a href="javascript:void(0)">编程爱好者</a> >>
-                    <a href="javascript:void(0)">.Net Core内核研究</a>
-                    <label class="label label-success community-status">已加入</label>
-                </div>
-                <hr />
-                <div class="community-description">
-                    测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                </div>
-                <hr />
-                <div>
-                    <ul class="community-option-group">
-                        <li>
-                            <span>
-                                <span class="label label-info">程序</span>
-                                <span class="label label-info">编程与人生</span>
-                                <span class="label label-info">Geeker</span>
-                            </span>
-                            <span>创建于2015年11月29日</span>
-                            <span>组内成员 177 人</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="community-area">
-            <div>
-                <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-            </div>
-            <div class="community-content">
-                <div class="community-path">
-                    <a href="javascript:void(0)">编程爱好者</a> >>
-                    <a href="javascript:void(0)">.Net Core内核研究</a>
-                    <label class="label label-success community-status">已加入</label>
-                </div>
-                <hr />
-                <div class="community-description">
-                    测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                </div>
-                <hr />
-                <div>
-                    <ul class="community-option-group">
-                        <li>
-                            <span>
-                                <span class="label label-info">程序</span>
-                                <span class="label label-info">编程与人生</span>
-                                <span class="label label-info">Geeker</span>
-                            </span>
-                            <span>创建于2015年11月29日</span>
-                            <span>组内成员 177 人</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="community-area">
-            <div>
-                <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-            </div>
-            <div class="community-content">
-                <div class="community-path">
-                    <a href="javascript:void(0)">编程爱好者</a> >>
-                    <a href="javascript:void(0)">.Net Core内核研究</a>
-                    <label class="label label-success community-status">已加入</label>
-                </div>
-                <hr />
-                <div class="community-description">
-                    测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                </div>
-                <hr />
-                <div>
-                    <ul class="community-option-group">
-                        <li>
-                            <span>
-                                <span class="label label-info">程序</span>
-                                <span class="label label-info">编程与人生</span>
-                                <span class="label label-info">Geeker</span>
-                            </span>
-                            <span>创建于2015年11月29日</span>
-                            <span>组内成员 177 人</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="community-area">
-            <div>
-                <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-            </div>
-            <div class="community-content">
-                <div class="community-path">
-                    <a href="javascript:void(0)">编程爱好者</a> >>
-                    <a href="javascript:void(0)">.Net Core内核研究</a>
-                    <label class="label label-success community-status">已加入</label>
-                </div>
-                <hr />
-                <div class="community-description">
-                    测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                </div>
-                <hr />
-                <div>
-                    <ul class="community-option-group">
-                        <li>
-                            <span>
-                                <span class="label label-info">程序</span>
-                                <span class="label label-info">编程与人生</span>
-                                <span class="label label-info">Geeker</span>
-                            </span>
-                            <span>创建于2015年11月29日</span>
-                            <span>组内成员 177 人</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="community-area">
-            <div>
-                <img class="community-image" src="http://cdn.v2ex.co/navatar/98d6/f58a/873_large.png?m=1441159411" alt="Community Image" />
-            </div>
-            <div class="community-content">
-                <div class="community-path">
-                    <a href="javascript:void(0)">编程爱好者</a> >>
-                    <a href="javascript:void(0)">.Net Core内核研究</a>
-                    <label class="label label-success community-status">已加入</label>
-                </div>
-                <hr />
-                <div class="community-description">
-                    测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                </div>
-                <hr />
-                <div>
-                    <ul class="community-option-group">
-                        <li>
-                            <span>
-                                <span class="label label-info">程序</span>
-                                <span class="label label-info">编程与人生</span>
-                                <span class="label label-info">Geeker</span>
-                            </span>
-                            <span>创建于2015年11月29日</span>
-                            <span>组内成员 177 人</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        }
         <ul class="pagination">
             <li class="disabled"><a href="javascript:void(0)"><i class="icon-angle-left"></i></a></li>
             <li class="active">
@@ -325,35 +65,21 @@
     <div id="tags-master-area" class="col-md-3">
         <p class="tag-title">热门标签</p>
         <hr />
-        <label class="label label-primary hot-tag">Java开发</label>
-        <label class="label label-primary hot-tag">Java开发</label>
-        <label class="label label-primary hot-tag">Java开发</label>
-        <label class="label label-primary hot-tag">Java开发</label>
-        <label class="label label-primary hot-tag">Java开发</label>
-        <label class="label label-primary hot-tag">Java开发</label>
-        <label class="label label-primary hot-tag">Java开发</label>
-        <label class="label label-primary hot-tag">Java开发</label>
-        <label class="label label-primary hot-tag">Java开发</label>
+        @foreach (var aTag in hotTags)
+        {
+            <label class="label label-primary hot-tag">@aTag.TagName</label>
+        }
 
         <div id="reco-master-area">
             <div class="reco-area">
                 <p class="tag-title">推荐圈子</p>
                 <hr />
-                <div>
-                    <span class="reco">T4培训圈 <a href="javascript:void(0)">查看详细</a></span>
-                </div>
-                <div>
-                    <span class="reco">T4培训圈 <a href="javascript:void(0)">查看详细</a></span>
-                </div>
-                <div>
-                    <span class="reco">T4培训圈 <a href="javascript:void(0)">查看详细</a></span>
-                </div>
-                <div>
-                    <span class="reco">T4培训圈 <a href="javascript:void(0)">查看详细</a></span>
-                </div>
-                <div>
-                    <span class="reco">T4培训圈 <a href="javascript:void(0)">查看详细</a></span>
-                </div>
+                @foreach (var aReco in recos)
+                {
+                    <div>
+                        <span class="reco">@aReco.Name <a href="javascript:void(0)">查看详细</a></span>
+                    </div>
+                }
             </div>
         </div>
     </div>
