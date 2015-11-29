@@ -1,5 +1,6 @@
 ﻿using CoralSea.IBusiness.Community;
 using CoralSea.IBusiness.Rank;
+using CoralSea.IBusiness.Tag;
 using CoralSea.Injector;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,11 @@ namespace CoralSea.Web.Controllers
         /// </summary>
         private ITopicBusiness _iTopicBusiness = DependenceInjector.GetInstance<ITopicBusiness>();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        private ITagBusiness _iTagBusiness = DependenceInjector.GetInstance<ITagBusiness>();
+
         #endregion
 
         #region  + Configurations
@@ -51,16 +57,22 @@ namespace CoralSea.Web.Controllers
 
             ViewData["CurrentUserInfo"] = CurrentUserInfo;
             ViewData["RankLevel"] = _iRankLevelBusiness.GetRankLevel(CurrentUserInfo.Rank);
-
             return View(list);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tagId"></param>
+        /// <returns></returns>
         [HttpGet]
-        public ActionResult GuessCommunity()
+        public ActionResult GuessCommunity(int tagId = 0)
         {
-            
+            var list = _iCommunityBusiness.GetCommunityInfoList(tagId);
 
-            return View();
+            ViewData["HotTags"] = _iTagBusiness.GetHostTags(50);
+            ViewData["RecoComm"] = _iCommunityBusiness.GetRecommendCommunityList(CurrentUserInfo.Id);
+            return View(list);
         }
     }
 }

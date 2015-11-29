@@ -11,17 +11,21 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using CoralSea.Web.Models;
+using CoralSea.Model;
+using CoralSea.FakeData.User;
+using CoralSea.Common;
 
 namespace CoralSea.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
-        private static readonly ISecurityBusinesscs IsecurityBusinesscs = DependenceInjector.GetInstance<ISecurityBusinesscs>();
+        private static readonly ISecurityBusinesscs securityBusinesscs = DependenceInjector.GetInstance<ISecurityBusinesscs>();
+
         public AccountController()
         {
         }
-    
+
 
         //
         // GET: /Account/Login
@@ -29,7 +33,19 @@ namespace CoralSea.Web.Controllers
         public ActionResult Login(string returnUrl, string jobNumber, string password)
         {
             ViewBag.ReturnUrl = returnUrl;
-            if (returnUrl!=null&&returnUrl.Contains("Register"))
+
+            UserLoginModel model = new UserLoginModel
+            {
+                Password = password,
+                LoginType = LoginType.Veteran,
+                JobNumber = jobNumber
+            };
+
+            Session["UserInfo"] = new FakeUserInfo(RandomHelper.Next(2345));
+
+            securityBusinesscs.UserVerify(model);
+
+            if (returnUrl != null && returnUrl.Contains("Register"))
             {
                 return RedirectToAction("Register", "Home");
             }
@@ -39,14 +55,6 @@ namespace CoralSea.Web.Controllers
             }
             return View();
         }
-
-
-
-    
-
-       
-
-
-
+        
     }
 }

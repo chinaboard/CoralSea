@@ -274,6 +274,10 @@
       <Project>{857ba93f-4f47-41fa-aee9-200ef4023274}</Project>
       <Name>CoralSea.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CoralSea.FakeData\CoralSea.FakeData.csproj">
+      <Project>{855103fa-4788-413a-8232-b1700abeef17}</Project>
+      <Name>CoralSea.FakeData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CoralSea.IBusiness\CoralSea.IBusiness.csproj">
       <Project>{d694e937-27d9-4f0c-9c7c-cbc72ae9b8b5}</Project>
       <Name>CoralSea.IBusiness</Name>

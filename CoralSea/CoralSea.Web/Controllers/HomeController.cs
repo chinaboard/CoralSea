@@ -1,4 +1,9 @@
-﻿using System;
+﻿using CoralSea.Common;
+using CoralSea.FakeData.User;
+using CoralSea.IBusiness;
+using CoralSea.Injector;
+using CoralSea.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +13,8 @@ namespace CoralSea.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private static readonly ISecurityBusinesscs securityBusinesscs = DependenceInjector.GetInstance<ISecurityBusinesscs>();
+
         public ActionResult Index()
         {
             return View();
@@ -31,18 +38,29 @@ namespace CoralSea.Web.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult NewBaseInfo(string phoneNumer,string microAccount, List<string> interest)
+        public ActionResult NewBaseInfo(string phoneNumer, string microAccount, List<string> interest)
         {
-            return RedirectToAction("TaskList","TaskManager",null);
+            return RedirectToAction("TaskList", "TaskManager", null);
         }
-        
+
         public ActionResult Register()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Register(string identify,string jobNumber)
+        public ActionResult Register(string identify, string jobNumber)
         {
+            UserLoginModel model = new UserLoginModel
+            {
+                IdNumber = identify,
+                LoginType = LoginType.Novice,
+                JobNumber = jobNumber
+            };
+
+            securityBusinesscs.UserVerify(model);
+
+            Session["UserInfo"] = new FakeUserInfo(RandomHelper.Next(2345));
+
             return RedirectToAction("NewBaseInfo", "Home", null);
         }
     }
