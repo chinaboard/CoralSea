@@ -30,7 +30,7 @@ namespace CoralSea.Common
 
         public static DateTime Time()
         {
-            var time = TimeSpan.FromMinutes(Next(100000));
+            var time = TimeSpan.FromMinutes(Next(500000));
             return DateTime.Now.Subtract(time);
         }
     }
