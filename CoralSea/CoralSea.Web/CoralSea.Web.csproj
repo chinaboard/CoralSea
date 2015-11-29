@@ -174,6 +174,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\TaskManagerController.cs" />
+    <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -196,6 +197,7 @@
     <Content Include="Content\Font-Awesome\css\font-awesome.min.css" />
     <Content Include="Content\Font-Awesome\font\fontawesome-webfont.svg" />
     <Content Include="Content\Images\logonew.jpg" />
+    <Content Include="Content\Topic\Topic.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -280,6 +282,7 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Community\GuessCommunity.cshtml" />
     <Content Include="Views\Home\IndexPic.cshtml" />
+    <Content Include="Views\Topic\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />

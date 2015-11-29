@@ -19,7 +19,11 @@
                 </div>
                 <div class="community-content">
                     <div class="community-path">
-                        <a href="javascript:void(0)">@aCommunity.ParentId</a> >>
+                        @if (!string.IsNullOrWhiteSpace(aCommunity.ParentName))
+                        {
+                            <a href="javascript:void(0)">@aCommunity.ParentName</a>
+                            <span> >> </span>
+                        }
                         <a href="javascript:void(0)">@aCommunity.Name</a>
                         <label class="label label-@(aCommunity.HasCurrentUserJoin ? "success" : "default") community-status">@(aCommunity.HasCurrentUserJoin ? "已加入" : "未加入")</label>
                     </div>
@@ -34,7 +38,7 @@
                                 <span>
                                     @foreach (var aTag in aCommunity.Tags)
                                     {
-                                        <span class="label label-info">程序</span>
+                                        <span class="label label-info">@aTag.TagName</span>
                                     }
                                 </span>
                                 <span>创建于 @aCommunity.CreateTime.ToString("yyyy年MM月dd日")</span>

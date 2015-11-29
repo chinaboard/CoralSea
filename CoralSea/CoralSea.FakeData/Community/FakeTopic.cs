@@ -14,12 +14,14 @@ namespace CoralSea.FakeData.Community
         {
             TopicId = topicId;
             CreatorId = RandomHelper.Next(10000);
-            TopicTitle = FakeName.MakeFakeName() + "发了个帖子";
+            TopicTitle = FakeContent.MakeTitle();
+            ViewCount = RandomHelper.Next(32423);
             for (int i = 0; i < RandomHelper.Next(2, 10); i++)
                 ReplyList.Add(new FakeTopicReply(topicId, RandomHelper.Next(10000)));
             CreateTime = RandomHelper.Time();
             LastUpdateTime = RandomHelper.Time();
             Owner = new FakeCommunityInfo();
+            Content = FakeContent.MakeContent();
         }
     }
 }
