@@ -16,6 +16,7 @@ namespace CoralSea.FakeData.Community
             TopicId = topicId;
             ReplyMemberId = RandomHelper.Next(10000);
             ReplyMemberName = FakeName.MakeFakeName();
+            ReplyMemberImage = FakeImage.MakeFakeImage();
             ReplyTime = RandomHelper.Time();
             Content = string.Empty;
             for (int i = 0; i < RandomHelper.Next(5, 10); i++)

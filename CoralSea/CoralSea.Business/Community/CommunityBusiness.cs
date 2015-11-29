@@ -22,6 +22,17 @@ namespace CoralSea.Business.Community
             return new CommunityOperationResult() { IsSucceed = RandomHelper.Bool() };
         }
 
+        public List<CommunityInfoModel> GetCommunityInfoList(int tagId)
+        {
+            var list = new List<CommunityInfoModel>();
+            var count = RandomHelper.Next(100);
+            while (count-- > 0)
+            {
+                list.Add(new FakeCommunityInfo());
+            }
+            return list;
+        }
+
         public List<CommunityMemberModel> GetCommunityMemberList(int communityId)
         {
             var list = new List<CommunityMemberModel>();
@@ -29,6 +40,17 @@ namespace CoralSea.Business.Community
             while (count-- > 0)
             {
                 list.Add(new FakeCommunityMember());
+            }
+            return list;
+        }
+
+        public List<CommunityInfoModel> GetRecommendCommunityList(int userId)
+        {
+            var list = new List<CommunityInfoModel>();
+            var count = RandomHelper.Next(100);
+            while (count-- > 0)
+            {
+                list.Add(new FakeCommunityInfo());
             }
             return list;
         }
