@@ -46,6 +46,7 @@
     <Compile Include="Rank\RankInfoBusiness.cs" />
     <Compile Include="Rank\RankLevelBusiness.cs" />
     <Compile Include="Rank\RankOperateBusiness.cs" />
+    <Compile Include="Tag\TagBusiness.cs" />
     <Compile Include="User\UserInfoBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
