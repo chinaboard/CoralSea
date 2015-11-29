@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoralSea.Model.Tag;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace CoralSea.Model.Community
 
         public int ParentId { get; set; }
 
+        public string ParentName { get; set; }
+
         public string Name { get; set; }
 
         public string Image { get; set; }
@@ -22,6 +25,12 @@ namespace CoralSea.Model.Community
         public int MasterId { get; set; }
 
         public string Description { get; set; }
+
+        public List<TagModel> Tags { get; private set; } = new List<TagModel>();
+
+        public int MemberCount { get; set; }
+
+        public bool HasCurrentUserJoin { get; set; }
 
         public DateTime CreateTime { get; set; }
 
