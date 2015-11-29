@@ -9,7 +9,11 @@ namespace CoralSea.IBusiness.Community
 {
     public interface ICommunityBusiness
     {
+        List<CommunityInfoModel> GetCommunityInfoList(int tagId);
+
         List<CommunityInfoModel> GetUserCommunityInfoList(int userId);
+
+        List<CommunityInfoModel> GetRecommendCommunityList(int userId);
 
         List<CommunityMemberModel> GetCommunityMemberList(int communityId);
 
