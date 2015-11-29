@@ -57,9 +57,9 @@ namespace CoralSea.Web.Controllers
                 JobNumber = jobNumber
             };
 
-            securityBusinesscs.UserVerify(model);
+            var result = securityBusinesscs.UserVerify(model);
 
-            Session["UserInfo"] = new FakeUserInfo(RandomHelper.Next(2345));
+            Session["UserInfo"] = new FakeUserInfo(result.UserId);
 
             return RedirectToAction("NewBaseInfo", "Home", null);
         }
