@@ -24,7 +24,13 @@ namespace CoralSea.Business.Community
 
         public List<TopicModel> GetLastHostTopics(int userId, int topK)
         {
-            throw new NotImplementedException();
+            var list = new List<TopicModel>();
+            var count = topK;
+            while (count-- > 0)
+            {
+                list.Add(new FakeTopic(RandomHelper.Next(56454)));
+            }
+            return list;
         }
 
         public TopicModel GetTopic(int topicId)

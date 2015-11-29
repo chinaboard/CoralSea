@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using CoralSea.Model.User
+@{ 
+    var userInfo = ViewData["CurrentUserInfo"] as UserInfoModel;}
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,34 +30,47 @@
             <div class="search-area">
                 <input id="search-box" type="text" placeholder="搜索珊瑚海" tabindex="1" />
             </div>
-            <div class="status-area">
-                <div class="btn-group">
-                    <a id="user-area" href="javascript:void(0)" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                        <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="User Avatar">
-                        <span class="name">勤超</span> <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a class="setting" href="javascript:void(0)">
-                                <i class="fa fa-user icon-user"></i>
-                                <span class="text">&nbsp;个人设置</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="setting" href="javascript:void(0)">
-                                <i class="fa fa-use icon-cogs"></i>
-                                <span class="text">系统设置</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="setting" href="javascript:void(0)">
-                                <i class="fa fa-signout icon-signout"></i>
-                                <span class="text">退出登录</span>
-                            </a>
-                        </li>
-                    </ul>
+            @if (userInfo == null)
+            {
+                <div class="status-area">
+                    <div class="btn-group">
+                        <a id="user-area" href="javascript:void(0)" class="btn btn-link">
+                            请登录
+                        </a>
+                    </div>
                 </div>
-            </div>
+            }
+            else
+            {
+                <div class="status-area">
+                    <div class="btn-group">
+                        <a id="user-area" href="javascript:void(0)" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                            <img src="@userInfo.Image" alt="User Avatar">
+                            <span class="name">@userInfo.Name</span> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a class="setting" href="javascript:void(0)">
+                                    <i class="fa fa-user icon-user"></i>
+                                    <span class="text">&nbsp;个人设置</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="setting" href="javascript:void(0)">
+                                    <i class="fa fa-use icon-cogs"></i>
+                                    <span class="text">系统设置</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="setting" href="javascript:void(0)">
+                                    <i class="fa fa-signout icon-signout"></i>
+                                    <span class="text">退出登录</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            }
         </div>
     </div>
     <div class="logo-header">
