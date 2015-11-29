@@ -11,6 +11,8 @@ namespace CoralSea.IBusiness.Tag
     {
         void AddTag(TagModel model);
 
+        List<TagModel> GetTags();
+
         List<TagModel> GetHostTags(int topK);
 
         List<TagModel> GetRecommendTags(int userId);
