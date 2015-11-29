@@ -25,10 +25,6 @@ namespace CoralSea.Model.Community
 
         public TopicStatus Status { get; set; } = TopicStatus.Normal;
 
-        public string AuthorImage { get; set; }
-
-        public string CommunityName { get; set; }
-
         public DateTime CreateTime { get; set; }
 
         public DateTime LastUpdateTime { get; set; }

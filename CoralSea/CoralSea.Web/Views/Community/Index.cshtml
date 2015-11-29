@@ -38,7 +38,7 @@
                 @foreach (var aEntity in Model)
                 {
                     <div class="a-community">
-                        <img src="@aEntity.AuthorImage" alt="Avatar" class="pull-left avatar">
+                        <img src="@aEntity.LastReply.ReplyMemberImage" alt="Avatar" class="pull-left avatar">
                         <div class="community-content">
                             <div class="community-title">
                                 <p style="">
@@ -47,7 +47,7 @@
                                     <a href="javascript:void(0)">@aEntity.TopicTitle</a>
                                     主题
                                     <span class="group-name">
-                                        <a href="javascript:void(0)">@aEntity.CommunityName</a>
+                                        <a href="javascript:void(0)">@aEntity.Owner.Name</a>
                                         <span class="timestamp">@aEntity.LastReply.ReplyTime</span>
                                     </span>
                                 </p>
