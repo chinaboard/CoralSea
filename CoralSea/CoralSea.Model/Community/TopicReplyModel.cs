@@ -18,8 +18,6 @@ namespace CoralSea.Model.Community
 
         public int TopicId { get; set; }
 
-        public string Title { get; set; }
-
         public string Content { get; set; }
 
         public List<string> AdditionalFileList { get; private set; } = new List<string>();

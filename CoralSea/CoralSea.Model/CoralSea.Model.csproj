@@ -52,6 +52,7 @@
     <Compile Include="Rank\RankInfoModel.cs" />
     <Compile Include="Rank\RankLevelModel.cs" />
     <Compile Include="Rank\RankOperateModel.cs" />
+    <Compile Include="Tag\TagModel.cs" />
     <Compile Include="TourMission\TourMissionCompleteResult.cs" />
     <Compile Include="TourMission\TourMissionModel.cs" />
     <Compile Include="TourMission\TourMissionSummaryModel.cs" />

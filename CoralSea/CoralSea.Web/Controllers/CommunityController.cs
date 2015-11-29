@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CoralSea.IBusiness.Community;
+using CoralSea.Injector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,8 +11,17 @@ namespace CoralSea.Web.Controllers
     /// <summary>
     /// 登录后的主页，以及圈子页面
     /// </summary>
-    public class CommunityController : Controller
+    public class CommunityController : BaseController
     {
+        #region  + Services
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private ICommunityBusiness _iCommunityBusiness = DependenceInjector.GetInstance<ICommunityBusiness>();
+
+        #endregion
+
         /// <summary>
         /// 
         /// </summary>
@@ -18,6 +29,8 @@ namespace CoralSea.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            var list = _iCommunityBusiness.GetUserCommunityInfoList(CurrentUserInfo.Id);
+
             return View();
         }
 
