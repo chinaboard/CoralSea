@@ -1,7 +1,12 @@
-﻿
+﻿@using CoralSea.Model.Community
+@using CoralSea.Model.User
+@using CoralSea.Model.Rank
+@model List<TopicModel>
 @{
     ViewBag.Title = "圈子";
     Layout = "~/Views/Shared/_CommonLayout.cshtml";
+    var userInfo = ViewData["CurrentUserInfo"] as UserInfoModel;
+    var rankLevel = ViewData["RankLevel"] as RankLevelModel ?? new RankLevelModel();
 }
 <div>
     <div id="total-content" class="row">
@@ -30,246 +35,33 @@
             </div>*@
             <hr style=" margin: 12px 0px; width: 100%;" />
             <div class="communitys-area">
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
+                @foreach (var aEntity in Model)
+                {
+                    <div class="a-community">
+                        <img src="@aEntity.AuthorImage" alt="Avatar" class="pull-left avatar">
+                        <div class="community-content">
+                            <div class="community-title">
+                                <p style="">
+                                    <a href="javascript:void(0)">@aEntity.LastReply.ReplyMemberName</a>
+                                    回应了
+                                    <a href="javascript:void(0)">@aEntity.TopicTitle</a>
+                                    主题
+                                    <span class="group-name">
+                                        <a href="javascript:void(0)">@aEntity.CommunityName</a>
+                                        <span class="timestamp">@aEntity.LastReply.ReplyTime</span>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="community-inner-content">
+                                @aEntity.LastReply.Content
+                            </div>
                         </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
-                    </div>
-                    <div class="community-operation">
+                        <div class="community-operation">
 
-                    </div>
-                    <hr />
-                </div>
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
                         </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
+                        <hr />
                     </div>
-                    <div class="community-operation">
-
-                    </div>
-                    <hr />
-                </div>
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
-                    </div>
-                    <div class="community-operation">
-
-                    </div>
-                    <hr />
-                </div>
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
-                    </div>
-                    <div class="community-operation">
-
-                    </div>
-                    <hr />
-                </div>
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
-                    </div>
-                    <div class="community-operation">
-
-                    </div>
-                    <hr />
-                </div>
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
-                    </div>
-                    <div class="community-operation">
-
-                    </div>
-                    <hr />
-                </div>
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
-                    </div>
-                    <div class="community-operation">
-
-                    </div>
-                    <hr />
-                </div>
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
-                    </div>
-                    <div class="community-operation">
-
-                    </div>
-                    <hr />
-                </div>
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
-                    </div>
-                    <div class="community-operation">
-
-                    </div>
-                    <hr />
-                </div>
-                <div class="a-community">
-                    <img src="http://tp4.sinaimg.cn/1773763595/180/5739992733/1" alt="Avatar" class="pull-left avatar">
-                    <div class="community-content">
-                        <div class="community-title">
-                            <p style="">
-                                <a href="javascript:void(0)">勤超</a>
-                                回应了
-                                <a href="javascript:void(0)">今晚有人出来打篮球吗</a>
-                                主题
-                                <span class="group-name">
-                                    <a href="javascript:void(0)">研发篮球协会</a>
-                                    <span class="timestamp">3分钟前</span>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="community-inner-content">
-                            测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试。
-                        </div>
-                    </div>
-                    <div class="community-operation">
-
-                    </div>
-                    <hr />
-                </div>
+                }
                 <div class="text-center">
                     <ul class="pagination">
                         <li class="disabled"><a href="javascript:void(0)"><i class="icon-angle-left"></i></a></li>
@@ -302,22 +94,24 @@
                             <div class="basic-info">
                                 <img src="http://shuxue.chazidian.com/uploadfile/2014/0630/20140630080100878.jpg" class="userface" alt="">
                                 <div class="user-info">
-                                    <div class="pl">牛勤超</div>
+                                    <div class="pl">@userInfo.Name</div>
                                 </div>
                             </div>
                             <div class="user-intro">
                                 <dl class="dl-horizontal">
                                     <dt>入职时间</dt>
-                                    <dd>2013-11-11</dd>
+                                    <dd>@userInfo.EntryTime</dd>
                                     <dt>组织架构</dt>
-                                    <dd>系统研发中心 / 产品研发中心 / 旅游酒店项目研发部 / 系统研发组</dd>
+                                    <dd>@userInfo.GroupName</dd>
                                     <dt>积分等级</dt>
-                                    <dd>99</dd>
+                                    <dd>@(string.Format("{3}皇冠{0}日{1}月{2}星", rankLevel.Sun, rankLevel.Moon, rankLevel.Star, rankLevel.Crown)</dd>
                                     <dt>兴&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;趣</dt>
                                     <dd>
                                         <div>
-                                            <span class="label label-info">.Net开发程序员</span>
-                                            <span class="label label-info">Python开发程序员</span>
+                                            @foreach (var aString in userInfo.Interesting)
+                                            {
+                                                <span class="label label-info">@aString</span>
+                                            }
                                         </div>
                                     </dd>
                                 </dl>

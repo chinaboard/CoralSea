@@ -1,4 +1,5 @@
 ﻿using CoralSea.IBusiness.Community;
+using CoralSea.IBusiness.Rank;
 using CoralSea.Injector;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,22 @@ namespace CoralSea.Web.Controllers
         /// 
         /// </summary>
         private ICommunityBusiness _iCommunityBusiness = DependenceInjector.GetInstance<ICommunityBusiness>();
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        private IRankLevelBusiness _iRankLevelBusiness = DependenceInjector.GetInstance<IRankLevelBusiness>();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private ITopicBusiness _iTopicBusiness = DependenceInjector.GetInstance<ITopicBusiness>();
+
+        #endregion
+
+        #region  + Configurations
+
+        private const int DEFAULT_HOST_TOPIC_COUNT = 10;
 
         #endregion
 
@@ -29,14 +46,20 @@ namespace CoralSea.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var list = _iCommunityBusiness.GetUserCommunityInfoList(CurrentUserInfo.Id);
+            var list = _iTopicBusiness.GetLastHostTopics(CurrentUserInfo.Id, DEFAULT_HOST_TOPIC_COUNT);
 
-            return View();
+
+            ViewData["CurrentUserInfo"] = CurrentUserInfo;
+            ViewData["RankLevel"] = _iRankLevelBusiness.GetRankLevel(CurrentUserInfo.Rank);
+
+            return View(list);
         }
 
         [HttpGet]
         public ActionResult GuessCommunity()
         {
+            
+
             return View();
         }
     }

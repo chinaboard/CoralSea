@@ -14,6 +14,8 @@ namespace CoralSea.Model.Community
 
         public string ReplyMemberName { get; set; }
 
+        public string ReplyMemberImage { get; set; }
+
         public DateTime ReplyTime { get; set; }
 
         public int TopicId { get; set; }

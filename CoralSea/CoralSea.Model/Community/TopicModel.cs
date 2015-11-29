@@ -19,9 +19,15 @@ namespace CoralSea.Model.Community
 
         public int ReplyCount { get { return ReplyList.Count; } }
 
+        public CommunityInfoModel Owner { get; set; }
+
         public TopicReplyModel LastReply { get { return ReplyList.Last(); } }
 
         public TopicStatus Status { get; set; } = TopicStatus.Normal;
+
+        public string AuthorImage { get; set; }
+
+        public string CommunityName { get; set; }
 
         public DateTime CreateTime { get; set; }
 
