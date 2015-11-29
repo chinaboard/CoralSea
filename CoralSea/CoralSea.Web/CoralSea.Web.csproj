@@ -178,6 +178,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Authorized.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -206,7 +207,27 @@
     <Content Include="Content\Font-Awesome\font\fontawesome-webfont.woff" />
     <Content Include="Content\Font-Awesome\font\FontAwesome.otf" />
     <Content Include="App_Data\TCConfig\CoralSea.Injector.config" />
+    <Content Include="Scripts\fullpage.js\说明下载.url" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\fullpage.js\css\jquery.fullPage.css" />
+    <Content Include="Scripts\fullpage.js\images\1.jpg" />
+    <Content Include="Scripts\fullpage.js\images\2.jpg" />
+    <Content Include="Scripts\fullpage.js\images\3.jpg" />
+    <Content Include="Scripts\fullpage.js\images\4.jpg" />
+    <Content Include="Scripts\fullpage.js\index.html" />
+    <Content Include="Scripts\fullpage.js\index11.html" />
+    <Content Include="Scripts\fullpage.js\index12.html" />
+    <Content Include="Scripts\fullpage.js\index13.html" />
+    <Content Include="Scripts\fullpage.js\index2.html" />
+    <Content Include="Scripts\fullpage.js\index3.html" />
+    <Content Include="Scripts\fullpage.js\index4.html" />
+    <Content Include="Scripts\fullpage.js\index5.html" />
+    <Content Include="Scripts\fullpage.js\index6.html" />
+    <Content Include="Scripts\fullpage.js\index7.html" />
+    <Content Include="Scripts\fullpage.js\index8.html" />
+    <Content Include="Scripts\fullpage.js\js\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\fullpage.js\js\jquery.fullPage.js" />
+    <Content Include="Scripts\fullpage.js\js\jquery.fullPage.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -258,6 +279,7 @@
     <Content Include="Views\Community\Index.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Community\GuessCommunity.cshtml" />
+    <Content Include="Views\Home\IndexPic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />

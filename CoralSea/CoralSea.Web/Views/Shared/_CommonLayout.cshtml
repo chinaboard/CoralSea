@@ -79,7 +79,7 @@
                 <li><a class="coral-nav-link" href="javascript:void(0)">首页</a></li>
                 <li><a class="coral-nav-link" href="javascript:void(0)">我的圈子</a></li>
                 <li>@Html.ActionLink("发现圈子", "GuessCommunity", new { controller = "Community" }, new { @class = "coral-nav-link" })</li>
-                <li><a class="coral-nav-link" href="javascript:void(0)">活动广场</a></li>
+                <li><a class="coral-nav-link" href="@Url.Content("~/Activity/Index")">活动广场</a></li> 
                 <li><a class="coral-nav-link" href="javascript:void(0)">随便看看</a></li>
             </ul>
         </div>
@@ -107,7 +107,7 @@
                     <li><a class="footer-link" href="javascript:void(0)">我的信息</a></li> ·
                     <li><a class="footer-link" href="javascript:void(0)">我的圈子</a></li> ·
                     <li><a class="footer-link" href="javascript:void(0)">随便看看</a></li> ·
-                    <li><a class="footer-link" href="javascript:void(0)">活动广场</a></li> ·
+                    <li><a class="footer-link" href="@Url.Content("~/Activity/Index")">活动广场</a></li> ·
                     <li><a class="footer-link" href="javascript:void(0)">帮助中心</a></li>
                 </ul>
             </div>

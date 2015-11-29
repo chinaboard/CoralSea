@@ -61,7 +61,12 @@ namespace CoralSea.Web.Controllers
 
             Session["UserInfo"] = new FakeUserInfo(result.UserId);
 
-            return RedirectToAction("NewBaseInfo", "Home", null);
+            return RedirectToAction("IndexPic", "Home", null);
+        }
+
+        public ActionResult IndexPic()
+        {
+            return View();
         }
     }
 }
