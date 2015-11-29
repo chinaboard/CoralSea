@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "document", "document", "{C4DE52E4-3170-445C-B64D-1A76685F0EF4}"
+	ProjectSection(SolutionItems) = preProject
+		document\时间安排.xlsx = document\时间安排.xlsx
+		document\珊瑚海产品需求说明书(1).docx = document\珊瑚海产品需求说明书(1).docx
+		document\珊瑚海架构设计.docx = document\珊瑚海架构设计.docx
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{ABBB40F7-087F-426D-84D7-C7F3A0ED181A}"
 EndProject
