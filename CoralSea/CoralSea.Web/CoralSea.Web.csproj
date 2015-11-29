@@ -270,9 +270,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CoralSea.Business\CoralSea.Business.csproj">
+      <Project>{b2b287d6-01c8-457c-80e1-65a22dd514ac}</Project>
+      <Name>CoralSea.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CoralSea.Common\CoralSea.Common.csproj">
       <Project>{857ba93f-4f47-41fa-aee9-200ef4023274}</Project>
       <Name>CoralSea.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CoralSea.FakeData\CoralSea.FakeData.csproj">
+      <Project>{855103fa-4788-413a-8232-b1700abeef17}</Project>
+      <Name>CoralSea.FakeData</Name>
     </ProjectReference>
     <ProjectReference Include="..\CoralSea.IBusiness\CoralSea.IBusiness.csproj">
       <Project>{d694e937-27d9-4f0c-9c7c-cbc72ae9b8b5}</Project>
