@@ -1,0 +1,111 @@
+﻿@using CoralSea.Model.Community
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+}
+@model TopicModel
+
+<div class="row">
+    <div id="topic-master-area" class="col-md-8">
+        <div class="topic-area">
+            <div class="topic-image-area">
+                <img src="@Model.Owner.Image" alt="Alternate Text" />
+            </div>
+            <div class="topic-area">
+                <div class="topic-community"><a href="javascript:void(0)">@Model.Owner.Name >> </a></div>
+                <div class="topic-title">@Model.TopicTitle</div>
+            </div>
+            <div class="topic-content">
+                <hr />
+                @Model.Content
+                <hr />
+                <div>
+                    <ul class="topic-ul">
+                        <li>
+                            创建于 @Model.CreateTime.ToShortDateString()
+                        </li>
+                        <li>
+                            最新回复由 @Model.LastReply.ReplyMemberName 在 @Model.LastReply.ReplyTime.ToLongTimeString()
+                        </li>
+                        <li>
+                            查看次数 @Model.ViewCount
+                        </li>
+                        <li>
+                            回复总数 @Model.ReplyCount
+                        </li>
+                        <li>
+                            最后变更于 @Model.LastUpdateTime
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="comments-area">
+
+            @{ int autokey = 0; }
+            @foreach (var aComment in Model.ReplyList)
+            {
+
+                <div class="a-comment">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="48" valign="top" align="center"><img src="@aComment.ReplyMemberImage" class="avatar" border="0"></td>
+                                <td width="10" valign="top"></td>
+                                <td width="auto" valign="top" align="left">
+                                    <div class="fr"> &nbsp; &nbsp; <span class="label label-default">@(++autokey)</span></div>
+                                    <div class="sep3"></div>
+                                    <strong><a>@aComment.ReplyMemberName</a></strong>&nbsp; &nbsp;<span class="replay-time small">回复于 @aComment.ReplyTime</span>
+                                    <div class="sep5"></div>
+                                    <div class="reply_content">
+                                        @aComment.Content
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            }
+
+            @*<ul class="pagination">
+                <li class="disabled"><a href="javascript:void(0)"><i class="icon-angle-left"></i></a></li>
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li><a href="javascript:void(0)">2</a></li>
+                <li><a href="javascript:void(0)">3</a></li>
+                <li><a href="javascript:void(0)">4</a></li>
+                <li><a href="javascript:void(0)">5</a></li>
+                <li><a href="javascript:void(0)">6</a></li>
+                <li><a href="javascript:void(0)">7</a></li>
+                <li><a href="javascript:void(0)">8</a></li>
+                <li><a href="javascript:void(0)">9</a></li>
+                <li><a href="javascript:void(0)">10</a></li>
+                <li><a href="javascript:void(0)"><i class="icon-angle-right"></i></a></li>
+            </ul>*@
+        </div>
+        <div class="reply">
+            <label style="font-weight: bold;">现在回复：</label>
+            <div contenteditable="true" style="
+    width: 760px;
+    height: 60px;
+    border: 1px solid #E4E4E4;
+    font-family: 'Microsoft Yahei';
+"></div>
+            <input type="submit" class="btn btn-primary" value="回复话题" style="
+    padding: 2px 30px;
+    margin: 3px;
+    float: right;
+">
+        </div>
+    </div>
+    <div id="intestring" class="col-md-3">
+        <p class="tag-title">可能感兴趣的小组</p>
+        <hr />
+        暂无数据。
+    </div>
+</div>
+
+    @section headresource {
+        <link href="~/Content/Topic/Topic.css" rel="stylesheet" type="text/css" />
+    }
