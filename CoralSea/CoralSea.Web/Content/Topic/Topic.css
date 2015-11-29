@@ -1,0 +1,74 @@
+﻿#topic-master-area, #intestring {
+    font-family: "微软雅黑";
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 20px;
+}
+
+hr {
+    margin: 5px;
+}
+
+#intestring {
+    margin-left: 15px;
+    width: 300px;
+}
+
+.topic-ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.topic-image-area, .topic-area {
+    display: inline-block;
+}
+
+.topic-community {
+    color: gray;
+    font-family: "Microsoft YaHei";
+    font-size: 10px;
+}
+
+.topic-title {
+    font-size: 20px;
+}
+
+.topic-image-area img {
+    margin-top: -15px;
+}
+
+.topic-content {
+    margin-left: 60px;
+    width: 90%;
+}
+
+ul.topic-ul {
+    font-size: 10px;
+    color: Gray;
+}
+
+.topic-area {
+    margin-left: 7px;
+}
+
+.fr {
+    float: right;
+}
+
+.a-comment {
+    border-bottom: 1px solid #DADADA;
+    padding: 8px 5px;
+}
+
+.comments-area {
+    margin: 20px 0px 10px;
+}
+
+.comments-area img {
+    width: 30px;
+}
+
+.replay-time {
+    font-size: 10px;
+    color: gray;
+}
