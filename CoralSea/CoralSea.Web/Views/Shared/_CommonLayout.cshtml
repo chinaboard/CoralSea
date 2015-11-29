@@ -1,6 +1,6 @@
 ﻿@using CoralSea.Model.User
 @{ 
-    var userInfo = ViewData["CurrentUserInfo"] as UserInfoModel;}
+    var userInfo = ViewData["CurrentUserInfo"] as UserInfoModel;
 }
 <!DOCTYPE html>
 <html>
@@ -76,7 +76,7 @@
         </div>
         <div class="coral-nav">
             <ul class="coral-nav-ul">
-                <li><a class="coral-nav-link" href="javascript:void(0)">首页</a></li>
+                <li>@Html.ActionLink("首页", "Index", new { controller = "Community" }, new { @class = "coral-nav-link" })</li>
                 <li><a class="coral-nav-link" href="javascript:void(0)">我的圈子</a></li>
                 <li>@Html.ActionLink("发现圈子", "GuessCommunity", new { controller = "Community" }, new { @class = "coral-nav-link" })</li>
                 <li><a class="coral-nav-link" href="javascript:void(0)">活动广场</a></li>
@@ -99,7 +99,7 @@
                     <li><a class="footer-link" href="javascript:void(0)">同程大学</a></li>
                 </ul>
             </div>
-            <div class="footer-group">
+            @*<div class="footer-group">
                 <label class="footer-title">
                     相关功能
                 </label>
@@ -110,7 +110,7 @@
                     <li><a class="footer-link" href="javascript:void(0)">活动广场</a></li> ·
                     <li><a class="footer-link" href="javascript:void(0)">帮助中心</a></li>
                 </ul>
-            </div>
+            </div>*@
             <div class="">
                 © 2015 CoralSea.com, all rights reserved.
             </div>
