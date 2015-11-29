@@ -15,6 +15,7 @@ namespace CoralSea.FakeData.Community
             TopicId = topicId;
             CreatorId = RandomHelper.Next(10000);
             TopicTitle = FakeContent.MakeTitle();
+            ViewCount = RandomHelper.Next(32423);
             for (int i = 0; i < RandomHelper.Next(2, 10); i++)
                 ReplyList.Add(new FakeTopicReply(topicId, RandomHelper.Next(10000)));
             CreateTime = RandomHelper.Time();

@@ -458,9 +458,49 @@ namespace CoralSea.FakeData
             "丰田","渣打银行","花旗银行","荷兰银行","德意志银行","瑞士银行","WIRED","Condé","Nast","Samsonite","Dior","OMEGA","EF","宜家",
             "Cartier","Davidoff","Gap","Volkswagen","H&M","Yippee","Arts","MUSE","L'Oréal","LANCÔME","Amazon","Starbucks","Porsche","Wagas"};
         #endregion
+
+        #region _communityList
+        static List<string> _communityList = new List<string>()
+        {
+            "文艺青年装逼会小组",
+            "我们什么都知道……一点儿小组",
+            "我们什么都聊小组",
+            "装逼指南小组",
+            "冷知识小组小组",
+            "傻x歌曲批判大会小组",
+            "买书如山倒 读书如抽丝小组",
+            "古怪比喻兴趣小组小组",
+            "不信你没个什么癖！小组",
+            "猎奇漫小组",
+            "请不要害羞小组",
+            "吃喝玩乐在苏州小组",
+            "加入这个组你就会有大叔了™小组",
+            "【求勾搭】同程最靠谱的恋爱小组！小组",
+            "八卦来了|小站上线小组",
+            "景涛咆哮组！！！！！！！！！！！小组",
+            "我们爱讲冷笑话小组",
+            "我们什么都知道……一点儿小组",
+            "文艺青年装逼会小组",
+            "加入这个小组 你就会变得很有钱小组",
+            "我们什么都聊小组",
+            "我们身边的皇家极品直播中！小组",
+            "灵异小组",
+            "穷游天下小组",
+            "每天提前上床N小时，我们一起读书小组",
+            "每月养成一个好习惯小组",
+            "私房菜小组",
+            "出国自助游教室小组",
+            "喜欢一个人旅行的女生小组",
+            "我们就喜欢折腾男朋友！小组"
+        };
+        #endregion
         static List<string> _groupName = new List<string>() { "旅游", "酒店", "游轮", "事业", "业务", "架构", "资源" };
 
-        public static string MakeFakeName()
+        public static string MakeFakeCommunityName()
+        {
+            return _communityList[RandomHelper.Next(_communityList.Count)];
+        }
+        public static string MakeFakeUserName()
         {
             return _nameList[RandomHelper.Next(_nameList.Count)];
         }

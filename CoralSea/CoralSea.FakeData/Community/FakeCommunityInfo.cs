@@ -16,7 +16,7 @@ namespace CoralSea.FakeData.Community
             CommunityId = RandomHelper.Next(23432);
             ParentId = RandomHelper.Bool() ? RandomHelper.Next(234) : 0;
             ParentName = ParentId > 0 ? FakeName.MakeFakeGroupName() : "";
-            Name = FakeName.MakeFakeName();
+            Name = FakeName.MakeFakeCommunityName();
             Image = FakeImage.MakeFakeImage();
             MasterId = RandomHelper.Next(23432);
             MemberCount = RandomHelper.Next(546);
@@ -25,7 +25,7 @@ namespace CoralSea.FakeData.Community
             CloseTime = RandomHelper.Bool() ? RandomHelper.Time() : DateTime.MaxValue;
 
             int tagCount = RandomHelper.Next(10);
-            for(int i = 0; i < tagCount; i++)
+            for (int i = 0; i < tagCount; i++)
             {
                 Tags.Add(new TagModel());
             }

@@ -47,7 +47,7 @@ namespace CoralSea.Business.Community
         public List<CommunityInfoModel> GetRecommendCommunityList(int userId)
         {
             var list = new List<CommunityInfoModel>();
-            var count = RandomHelper.Next(100);
+            var count = RandomHelper.Next(10);
             while (count-- > 0)
             {
                 list.Add(new FakeCommunityInfo());
