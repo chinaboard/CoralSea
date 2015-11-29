@@ -21,6 +21,7 @@ namespace CoralSea.FakeData.Community
             MasterId = RandomHelper.Next(23432);
             MemberCount = RandomHelper.Next(546);
             CreateTime = RandomHelper.Time();
+            Description = FakeContent.MakeDescription();
             LastActivityTime = RandomHelper.Time();
             CloseTime = RandomHelper.Bool() ? RandomHelper.Time() : DateTime.MaxValue;
 

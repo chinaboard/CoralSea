@@ -790,5 +790,9 @@ namespace CoralSea.FakeData
         {
             return _contentList[RandomHelper.Next(_contentList.Count)] + _contentList[RandomHelper.Next(_contentList.Count)] + _contentList[RandomHelper.Next(_contentList.Count)];
         }
+        public static string MakeDescription()
+        {
+            return _contentList[RandomHelper.Next(_contentList.Count)];
+        }
     }
 }
