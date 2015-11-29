@@ -13,7 +13,7 @@ namespace CoralSea.FakeData.Community
         public FakeCommunityMember()
         {
             RelatedId = RandomHelper.Next(10000);
-            MemberName = FakeName.MakeFakeName();
+            MemberName = FakeName.MakeFakeUserName();
             Image = FakeImage.MakeFakeImage();
             JoinTime = RandomHelper.Time();
         }

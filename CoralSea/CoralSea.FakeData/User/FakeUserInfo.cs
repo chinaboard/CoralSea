@@ -17,14 +17,15 @@ namespace CoralSea.FakeData.User
         {
             Id = id;
             JobNumber = RandomHelper.Next().ToString();
-            Name = FakeName.MakeFakeName();
+            Name = FakeName.MakeFakeUserName();
             EntryTime = RandomHelper.Bool() ? DateTime.Now.Subtract(TimeSpan.FromDays(RandomHelper.Next(2000))) : DateTime.Now.Subtract(TimeSpan.FromHours(RandomHelper.Next(1000)));
             Rank = (int)DateTime.Now.Subtract(EntryTime).TotalDays * 2 + RandomHelper.Next(1000);
             Sex = RandomHelper.Bool() ? "男" : "女";
             LastLoginTime = DateTime.Now;
-            NickName = FakeName.MakeFakeName();
+            NickName = FakeName.MakeFakeUserName();
             GroupName = FakeName.MakeFakeGroupName();
-            Interesting.AddRange(new List<string>() { "耍帅", "睡觉", "撸代码" });
+            for (int i = 0; i < RandomHelper.Next(2, 6); i++)
+                Interesting.Add(FakeName.MakeFakeTag());
             Signature = "yooooooooooo";
             Image = FakeImage.MakeFakeImage();
         }
